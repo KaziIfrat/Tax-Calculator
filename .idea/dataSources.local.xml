@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Sqlite (Xerial) - identifier.sqlite" uuid="e3f955e8-f2fa-424c-8d9d-bfae5e12228d">
+      <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
+    </data-source>
+    <data-source name="Rails Tax-Calculator: development" uuid="caecec60-b441-4e1a-a786-f2f2d499c6b5">
+      <auth-required>false</auth-required>
+    </data-source>
+  </component>
+</project>
