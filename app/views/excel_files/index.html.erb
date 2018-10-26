@@ -1,8 +1,53 @@
 <h2>Files</h2>
 
-
-
 <% @files.each do |file| %>
-    <%=  %>
-    <%= file.no_of_employees %>
-<% end %>
+    <% c = file.no_of_employees %>
+    <% for i in 1..c do %>
+
+            <table class="table table-bordered">
+              <thead>
+              <tr>
+                <th colspan="2"><%= file.employee_basics(i)[0]  %></th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Basic</td>
+                <td><%= file.employee_basics(i)[5]  %></td>
+              </tr>
+              <tr>
+                <td>PF</td>
+                <td><%= file.employee_basics(i)[1]  %></td>
+              </tr>
+
+              <tr>
+                <td>Fest bonus </td>
+                <td><%= file.employee_basics(i)[2]  %></td>
+              </tr>
+
+              <tr>
+                <td>transport </td>
+                <td><%= file.employee_basics(i)[3]  %></td>
+              </tr>
+              <tr>
+                <td>House rent </td>
+                <td><%= [300000,file.employee_basics(i)[5] /2].min  %></td>
+              </tr>
+
+              <tr>
+                <td>medical </td>
+                <td><%= [120000,file.employee_basics(i)[5] /10].min  %></td>
+              </tr>
+
+              <tr>
+                <td>Total </td>
+                <td><%= file.employee_basics(i)[4]   %></td>
+              </tr>
+
+              </tbody>
+            </table>
+
+
+
+    <%end %>
+    <% end %>
